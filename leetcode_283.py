@@ -4,12 +4,17 @@ from typing import List
 class Solution:
     @staticmethod
     def moveZeroes(nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
+        l, r = 0, 0
+        while r < len(nums):
+            if nums[r] != 0:
+                nums[l], nums[r] = nums[r], nums[l]
+                l += 1
+                r += 1
+            else:
+                r += 1
         return None
 
 
 if __name__ == "__main__":
     solution = Solution()
-    solution.moveZeroes(nums=[0, 1, 0, 3, 12])
+    solution.moveZeroes(nums=[0])
