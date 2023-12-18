@@ -15,10 +15,7 @@ class Solution:
                 n -= 1
             i += 1
 
-        if n == 0:
-            return True
-        else:
-            return False
+        return n == 0
 
 
 if __name__ == '__main__':
